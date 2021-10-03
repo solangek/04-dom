@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        //let vlon=33;
+        //let url = `htpp://wwewewe?lon=${vlon}&lat=${vlon}`;
+
+        document.querySelector("button").addEventListener("click", myFunction);
+
+    });
+
+    /* note that function definitions don't need to be inside the loading listener above */
+    function myFunction() {
+        var list = document.getElementById("list1") ;
+
+        var newitem = document.createElement("li");
+        var newtext = document.createTextNode("some text");
+        newitem.appendChild(newtext);
+
+        list.appendChild(newitem);
+    }
+</script>
+<body>
+<h1>Adding new elements in the document</h1>
+Click on the button to add new items in the list:
+<ol id="list1">
+    <li> some items 1</li>
+    <li> some items 2</li>
+</ol>
+
+<button>Try it</button>
+
+</body>
+</html>

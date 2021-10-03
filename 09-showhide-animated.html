@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Title</title>
+</head>
+
+<body>
+<script>
+
+    // The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests
+    // that the browser calls a specified function to update an animation before the next repaint.
+    // it gives the control to the browser when to re-render the layout (as opposed to setTimeOut)
+    function fadeOut(el) {
+        el.style.opacity = 1;
+
+        (function fade() {
+            if ((el.style.opacity -= .05) < 0) {
+                el.style.display = "none";
+            } else {
+                requestAnimationFrame(fade);
+            }
+        })();
+    };
+
+    function fadeIn(el, display) {
+        el.style.opacity = 0;
+        el.style.display = display || "block";
+
+        (function fade() {
+            var val = parseFloat(el.style.opacity);
+            if (!((val += .05) > 1)) {
+                el.style.opacity = val;
+                requestAnimationFrame(fade);
+            }
+        })();
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // all of your event bindings go here
+        document.getElementById("show").addEventListener("click",
+            function() {
+                fadeIn(document.getElementById("list1"))
+            }
+        ) ;
+        document.getElementById("hide").addEventListener("click",
+            function() {
+                fadeOut(document.getElementById("list1"))
+            }
+        ) ;
+    });
+
+</script>
+
+<div class="container">
+
+<h1>show hide elements in the document</h1>
+Click on the buttons:
+
+<button id="show">Show</button>
+<button id="hide">Hide</button>
+
+<div class="bg-info" id="list1">
+<ol id="">
+    <li> some items 1</li>
+    <li> some items 2</li>
+</ol>
+</div>
+    <p>
+        Some text.
+    </p>
+
+    <h2>Bootstrap has also some fade out animation upon dismissing an alert</h2>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

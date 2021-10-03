@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        // all of your event bindings go here
+        document.getElementById("show").addEventListener("click", showFunc);
+        document.getElementById("hide").addEventListener("click", hideFunc);
+    });
+
+
+    function showFunc() {
+        var list = document.getElementById("list1") ;
+        list.style.display = "block";
+    }
+
+    function hideFunc() {
+        var list = document.getElementById("list1") ;
+        list.style.display = "none";
+    }
+
+</script>
+<body>
+<h1>show hide elements in the document</h1>
+Click on the buttons:
+
+<button id="show">Show</button>
+<button id="hide">Hide</button>
+
+<ol id="list1">
+    <li> some items 1</li>
+    <li> some items 2</li>
+</ol>
+
+
+</body>
+</html>

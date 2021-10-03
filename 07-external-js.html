@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",function () {
+
+            var elements = document.getElementsByTagName("h1");
+            for (var i = 0; i < elements.length; i++)
+                elements[i].addEventListener("click", bluetext);
+            console.log("Listeners are done!");
+        });
+
+    </script>
+</head>
+<body>
+
+<script src="js/myfuncs.js"></script>
+
+<div class="text-center jumbotron">
+    <h1 >Click for blue /1</h1>
+</div>
+
+<p>This example uses an external JS file (include).</p>
+<p>Each h1 tag has a listener (click) that change their color.</p>
+
+<h1>Click for blue /2</h1>
+<h1>Click for blue /3</h1>
+
+</body>
+
+</html>

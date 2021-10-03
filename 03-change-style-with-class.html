@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        document.getElementById("color").addEventListener("click", myFunction);
+    });
+
+    function myFunction(e) {
+        document.getElementById("center-area").classList.add("bg-primary");
+        document.getElementById("center-area").classList.add("text-white");
+        //this.classList.add("btn");
+        // same as e.target.classList.add("btn");
+        this.classList.add("btn-danger");
+        // same as e.target.classList.add("btn-danger");
+    }
+</script>
+
+<body>
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col">
+            <h1>This is a bootstrap page</h1>
+            We are using CSS bootstrap class to change colors (see https://getbootstrap.com/docs/5.1/utilities/colors/).
+
+            <button id="color">change color</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" id="center-area">
+            <p>central area</p>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
