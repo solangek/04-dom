@@ -11,8 +11,13 @@
 
     // delete the item of corresponding <li>
     function deleteItem(event) {
+        // NOTE THAT:
         // event.target == this
-        this.parentElement.parentElement.removeChild(this.parentElement);
+
+        // You could write this:
+        // this.parentElement.parentElement.removeChild(this.parentElement);
+        // or simply that:
+        this.parentElement.remove();
     }
 
     function createItem() {
