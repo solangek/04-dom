@@ -3,19 +3,21 @@
 <head>
     <title>Demo</title>
 </head>
+<style>
+    div > p { color:red}
+</style>
 <body>
-<h1>Small javascript example</h1>
-    <p>why is the text below not displayed?
-    </p>
-    <p id="demo"> We are using this file as a whiteboard during class. The content might be invalid.
-    </p>
-
-    <script>
-        document.getElementById("demo").innerHTML = document.querySelector("h2").innerHTML;
-    </script>
-
-    <div>
-
+    <div class="container">
+        <h1>Testing</h1>
+        <p class="nice">first paragraph.</p>
+        <p id="ex2" class="nice job"> More text.</p>
     </div>
+<script>
+    //document.getElementById("ex2").innerHTML = document.querySelector("h2").innerHTML;
+</script>
 </body>
 </html>
+
+
+
+
