@@ -16,9 +16,10 @@
     });
 
     function myFunction(e) {
+        // inside a handler, "this" refers to e.target
         document.getElementById("center-area").classList.toggle("bg-primary");
         document.getElementById("center-area").classList.toggle("text-white");
-        //this.classList.add("btn");
+        // this.classList.add("btn");
         // same as e.target.classList.add("btn");
         this.classList.add("btn-danger");
         // same as e.target.classList.add("btn-danger");

@@ -13,10 +13,10 @@
 
     /* note that function definitions don't need to be inside the loading listener above */
     function myFunction() {
-        var list = document.getElementById("list1") ;
+        const list = document.getElementById("list1") ;
 
-        var newitem = document.createElement("li");
-        var newtext = document.createTextNode("some text");
+        const newitem = document.createElement("li");
+        const newtext = document.createTextNode("some text");
         newitem.appendChild(newtext);
 
         list.appendChild(newitem);
