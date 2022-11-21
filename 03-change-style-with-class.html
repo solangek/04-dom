@@ -17,8 +17,9 @@
 
     function myFunction(e) {
         // inside a handler, "this" refers to e.target
-        document.getElementById("center-area").classList.toggle("bg-primary");
-        document.getElementById("center-area").classList.toggle("text-white");
+        const center = document.getElementById("center-area");
+        center.classList.toggle("bg-primary");
+        center.classList.toggle("text-white");
         // this.classList.add("btn");
         // same as e.target.classList.add("btn");
         this.classList.add("btn-danger");

@@ -21,21 +21,21 @@
     }
 
     function createItem() {
-        var list = document.getElementById("list1") ;
+        const list = document.getElementById("list1") ;
 
         // create and insert the <li> item using DOM functions (method 1)
-        var newitem = document.createElement("li");
+        const newitem = document.createElement("li");
         // read input text and create the text node
-        var newtext = document.createTextNode(document.getElementById("user-input").value);
+        const newtext = document.createTextNode(document.getElementById("user-input").value);
         newitem.appendChild(newtext);
 
         // add the X button next to the new item
-        var b = document.createElement("button");
+        const b = document.createElement("button");
         b.innerHTML = "<span> X </span>"; //insert  manually HTML string (method 2)
 
         newitem.appendChild(b);
 
-        b.addEventListener('click', deleteItem); // removeListener
+        b.addEventListener('click', deleteItem); // attach the delete function to the button
 
         list.appendChild(newitem); // attach the new item
     }
