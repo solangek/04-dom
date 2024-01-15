@@ -14,22 +14,31 @@
     /* note that function definitions don't need to be inside the loading listener above */
     function myFunction() {
         const list = document.getElementById("list1") ;
-        const newitem = document.createElement("li");
-        const newtext = document.createTextNode("some text");
-        newitem.appendChild(newtext);
+        const listItem = document.createElement("li");
 
-        list.appendChild(newitem);
+        // first version
+        //const newtext = document.createTextNode("some text");
+        //newitem.appendChild(newtext);
+
+        // 2nd version
+        listItem.textContent = "some text";
+
+        list.appendChild(listItem);
     }
 </script>
 <body>
-<h1>Adding new elements in the document</h1>
-Click on the button to add new items in the list:
-<ol id="list1">
-    <li> some items 1</li>
-    <li> some items 2</li>
-</ol>
-
-<button>Try it</button>
-
+<header>
+    <h1>Adding new elements in the document</h1>
+</header>
+<main>
+    <section>
+        <p>Click on the button to add new items in the list:</p>
+        <ol id="list1">
+            <li>some items 1</li>
+            <li>some items 2</li>
+        </ol>
+        <button id="addItemBtn">Try it</button>
+    </section>
+</main>
 </body>
 </html>
