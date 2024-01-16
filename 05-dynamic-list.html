@@ -6,7 +6,13 @@
 </head>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+
         document.querySelector("button").addEventListener("click", createItem);
+
+        // assume there was existing items in the document at loading (see line 58)
+        // we need attach the delete function to the existing buttons like this:
+        // const buttons = document.querySelectorAll("button");
+        // buttons.forEach( (button) => button.addEventListener("click", deleteItem) );
     });
 
     // delete the item of corresponding <li>
@@ -49,6 +55,14 @@ Click on the button to add new items in the list:
 <button>Add</button>
 
 <ol id="list1">
+<!-- see the code at line 12. Uncomment the following lines to see the effect -->
+<!--    <li>some item 1-->
+<!--        <button><span> X </span></button>-->
+<!--    </li>-->
+<!--    <li>some item 2-->
+<!--        <button><span> X </span></button>-->
+<!--    </li>-->
+
 </ol>
 
 
